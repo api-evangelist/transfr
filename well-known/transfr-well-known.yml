@@ -1,0 +1,79 @@
+generated: '2026-08-30'
+method: probed
+source: live HTTPS probes of every Transfr host discovered in this pass (2026-08-30)
+note: >-
+  Every /.well-known/ path probed on Transfr hosts is a miss. transfrinc.com (Webflow)
+  returns a real 404 for each path. dashboard.transfrinc.com and portal.transfrvr.com are
+  single-page applications whose catch-all route answers HTTP 200 with the same HTML shell
+  for every path (2,803 bytes and 807 bytes respectively, identical for /openapi.json,
+  /graphql, /mcp and every /.well-known/* path) — these are SPA shells, not documents, and
+  are recorded as misses. No WellKnown, SecurityTxt, APICatalog or AgentCard pointer is
+  emitted, because Transfr serves none of these documents.
+hosts:
+- host: transfrinc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: dashboard.transfrinc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell (text/html, 2803 bytes) — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+- host: portal.transfrvr.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell (text/html, 807 bytes) — not a document
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: SPA catch-all HTML shell — not a document

@@ -1,0 +1,57 @@
+generated: '2026-08-30'
+method: searched
+source: https://transfrinc.com/pricing
+docs: https://transfrinc.com/pricing
+note: >-
+  Transfr publishes a named plan/licence structure but no prices. All three licences are
+  quote-only ("contact for quote" / "Schedule a Demo"); the only dollar figure printed on the
+  pricing page is a $100 per year charge for mobile-device-management software on purchased
+  headsets. There is no developer or API tier, no self-serve sign-up, and no usage-metered
+  pricing — Transfr is sold as a seat/site licence to schools, colleges, workforce boards and
+  non-profits.
+currency: USD
+pricing_model: quote-only
+self_serve_signup: false
+plan_count: 3
+plans:
+- name: Transfr Trek
+  price: null
+  price_disclosed: false
+  billing_period: unknown
+  how_to_buy: contact sales / schedule a demo
+  description: >-
+    Career-exploration licence: personalized career matching, 150+ career evaluations, 60+ VR
+    simulations, quarterly content updates, career-plan sharing, financial literacy, Spanish
+    language support, closed captioning, rostering and SSO, reporting, technical support and
+    curriculum resources.
+- name: Transfr Train
+  price: null
+  price_disclosed: false
+  billing_period: unknown
+  how_to_buy: contact sales / schedule a demo
+  description: >-
+    Career-training licence for a purchased industry: fundamental-skills simulations,
+    pre-employment programs in a 20-hour format (e-learning, VR, knowledge checks,
+    microcredentials), customizable simulation ordering, rostering and SSO, reporting,
+    technical support and curriculum resources.
+- name: Transfr All Access
+  price: null
+  price_disclosed: false
+  billing_period: unknown
+  how_to_buy: contact sales / schedule a demo
+  description: >-
+    Unlimited-use licence covering all Trek and Train content across every published industry
+    (automotive, aviation, diesel, electrical construction, hospitality, health sciences,
+    manufacturing, construction) plus the complete Fundamental Skills program.
+add_ons:
+- name: Headset mobile device management (MDM) software
+  price: '100.00'
+  currency: USD
+  billing_period: year
+  source: https://transfrinc.com/pricing
+limits: []
+api_tier: null
+x-evidence:
+- url: https://transfrinc.com/pricing
+  http_status: 200
+  fetched: '2026-08-30'

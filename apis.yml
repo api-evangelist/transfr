@@ -1,17 +1,32 @@
 aid: transfr
 name: Transfr
-description: 'Transfr is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Transfr Inc. is a New York City based workforce-education company that builds
+  immersive virtual-reality job-training simulations for schools, colleges, workforce
+  development boards, non-profits and justice-impacted programs. Its two products are Transfr
+  Trek, a career-exploration program covering more than 150 occupations, and Transfr Train,
+  hands-on VR skills training across sectors including manufacturing, healthcare, construction,
+  automotive, aviation, diesel technology, electrical construction and hospitality. Learner
+  and classroom data is administered through the Transfr dashboard, with rostering and single
+  sign-on delivered through third-party education platforms (Clever, ClassLink, Canvas) rather
+  than through a Transfr-published API. As of this profiling pass Transfr publishes no public
+  developer program, API reference or machine-readable contract.'
 url: https://raw.githubusercontent.com/api-evangelist/transfr/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/695eb16b152dcf308e340d64/6983d1ad02da087c55e14cda_Favicon.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-secondary-market-listing: https://forgeglobal.com/transfr_stock/
 specificationVersion: '0.20'
 created: '2026-08-30'
 modified: '2026-08-30'
 tags:
 - Company
+- Education
+- Workforce Development
+- Virtual Reality
+- Training
+- Career Exploration
+- EdTech
+- Simulation
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,47 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/transfr-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/transfr_stock/
+  url: https://transfrinc.com/
+- type: Blog
+  url: https://transfrinc.com/resources/blog
+- type: Pricing
+  url: https://transfrinc.com/pricing
+- type: Plans
+  url: plans/transfr-plans-pricing.yml
+- type: TermsOfService
+  url: https://transfrinc.com/terms
+- type: PrivacyPolicy
+  url: https://transfrinc.com/privacy-policy
+- type: Support
+  url: https://support.transfrinc.com/
+- type: Login
+  url: https://dashboard.transfrinc.com/login
+- type: LLMsTxt
+  url: llms/transfr-llms.txt
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Transfr ships VR training only as an end-user product — its full sitemap contains no
+    developer, API or integration page, its dashboard SPA bundle references no API host, and
+    rostering/SSO is delegated to Clever, ClassLink and Canvas rather than to a Transfr API.
+  evidence:
+  - url: https://transfrinc.com/sitemap.xml
+    status: 200
+  - url: https://transfrinc.com/openapi.json
+    status: 404
+  - url: https://transfrinc.com/llms.txt
+    status: 404
+  - url: https://transfrinc.com/.well-known/api-catalog
+    status: 404
+  - url: https://api.transfrinc.com/
+    status: 0  # DNS NXDOMAIN - host does not resolve
+  checked: '2026-08-30'
