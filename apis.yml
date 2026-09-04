@@ -11,6 +11,19 @@ description: 'Transfr Inc. is a New York City based workforce-education company 
   than through a Transfr-published API. As of this profiling pass Transfr publishes no public
   developer program, API reference or machine-readable contract.'
 url: https://raw.githubusercontent.com/api-evangelist/transfr/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: low
+  source:
+  - plans
+  - security
+  generated: '2026-09-03'
+  method: derived
 image: https://cdn.prod.website-files.com/695eb16b152dcf308e340d64/6983d1ad02da087c55e14cda_Favicon.svg
 x-type: company
 x-source: harvest:secondary-market
